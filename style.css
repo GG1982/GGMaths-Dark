@@ -27,8 +27,8 @@
     opacity: var(--text-opacity);
 }
 :focus {
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 4px;
+    outline: 6px solid var(--clr-accent);
+    outline-offset: 3px;
 }
 
 h1 {
@@ -38,8 +38,7 @@ h1 {
 
 a {
     text-decoration: none;
-    text-transform: capitalize;
-    cursor: pointer;
+    text-transform: capitalize; 
     color: var(--light-clr);
 }
 
