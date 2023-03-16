@@ -123,7 +123,6 @@ body {
     background-color: var(--dark-clr);
     color: var(--light-clr);
     font-family: var(--body-font);
-    overflow-x: hidden;
     
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -302,11 +301,14 @@ nav > ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 1rem;
+    width: 100%;
 }
 .card {
     background-color: #1A1A1A;
     padding: 20% 1rem 1rem;
     border: 1px solid rgb(42, 42, 42);
+
+    width: fit-content;
 
     display: flex;
     flex-direction: column;
