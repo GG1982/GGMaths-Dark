@@ -123,6 +123,7 @@ body {
     background-color: var(--dark-clr);
     color: var(--light-clr);
     font-family: var(--body-font);
+    overflow-x: hidden;
     
     display: grid;
     grid-template-rows: auto 1fr auto;
