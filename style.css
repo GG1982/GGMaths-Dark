@@ -216,14 +216,14 @@ header {
     }
 }
 
-nav {
+.nav-header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-grow: 1;
 }
 
-nav > ul {
+.nav-header > ul {
     display: flex;
     gap: 2rem;
 }
@@ -494,9 +494,19 @@ nav > ul {
 
 /* Footer */
 footer {
-    border: solid 1px red;
-    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    max-width: 40em;
 }
-/* footer {
-    background-color: green;
-}  */
+
+.nav-footer {
+    justify-self: end;
+}
+
+.nav-footer > ul {
+    display: flex;
+    gap: 2rem
+}
