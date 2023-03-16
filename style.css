@@ -184,9 +184,9 @@ main > section:last-child {
     filter: blur(5px);
     transition: all var(--fade-duration);
     transition-delay: calc(var(--order) * 100ms);
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 .fade-in-right {
     opacity: 0;
