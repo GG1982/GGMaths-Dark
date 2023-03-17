@@ -162,6 +162,7 @@ main > section:last-child {
 }
 
 .scroll-top {
+    display: none;
     position: fixed;
     width: fit-content;
     bottom: 10px;
@@ -479,6 +480,7 @@ header {
 .form-message {
     grid-column: 1 / -1;
 }
+
 
 .form-btn {
     cursor: pointer;

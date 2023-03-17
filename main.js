@@ -12,3 +12,19 @@ const fadeInRight = document.querySelectorAll('.fade-in-right')
 fadeIn.forEach((el) => observer.observe(el))
 fadeInLeft.forEach((el) => observer.observe(el))
 fadeInRight.forEach((el) => observer.observe(el))
+
+
+
+const scrollToTop = document.querySelector('.scroll-top')
+console.log(scrollToTop)
+
+window.onscroll = function() {scrollfunciton()}
+
+
+function scrollfunciton() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
+        scrollToTop.style.display = "block";
+      } else {
+        scrollToTop.style.display = "none";
+    }
+}
