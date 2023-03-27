@@ -27,8 +27,8 @@
 .bi {
     opacity: var(--text-opacity);
 }
-:focus {
-    outline: 6px solid var(--clr-accent);
+:focus-visible {
+    outline: 4px solid var(--clr-accent);
     outline-offset: 3px;
 }
 
@@ -131,18 +131,7 @@ body {
     background-size: 20px 20px;
     background-attachment: fixed;
 
-    /* position: relative;
-    isolation: isolate; */
 }
-
-
-/* body::after {
-    content: "";
-    position: absolute; 
-    inset: 0;
-    opacity: 0.3;
-    z-index: -1;
-} */
 
 body > * {
     width: min(100% - 2rem, 90em, 90vw);
@@ -506,6 +495,7 @@ footer {
 
 .nav-footer {
     justify-self: end;
+    padding: 0.5rem;
 }
 
 .nav-footer > ul {
