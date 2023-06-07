@@ -195,6 +195,7 @@ main > section:last-child {
 
 /* Header */
 header {
+    --nav-gap: 2rem;
     display: flex;
     padding-block: 1rem;
     justify-content: space-evenly;
@@ -202,6 +203,10 @@ header {
 
 @media only screen and (max-width: 700px) {
     header {
+        padding-block: var(--nav-gap);
+    }
+    .logo,
+    .nav-header .btn {
         display: none;
     }
 }
@@ -215,7 +220,7 @@ header {
 
 .nav-header > ul {
     display: flex;
-    gap: 2rem;
+    gap: var(--nav-gap);
 }
 .nav-link {
     opacity: var(--text-opacity);
@@ -249,7 +254,7 @@ header {
 /* Hero */
 .hero {
     display: grid;
-    min-height: calc(100vh - 2rem);
+    min-height: calc(100vh - 5rem);
     place-items: center;
     text-align: center;
 }
