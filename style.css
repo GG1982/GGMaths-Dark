@@ -43,6 +43,12 @@ a {
     color: var(--light-clr);
 }
 
+.body-link {
+    text-transform: lowercase;
+    color: #26e3c2;
+    text-decoration: underline;
+}
+
 .is-hidden {
     display: none;
 }
@@ -341,8 +347,36 @@ header {
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 800px) {
-    .about-container {
+
+/* Youtube */
+.youtube-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: var(--body-content-width);
+    margin-inline: auto;
+    align-items: center;
+    gap: 1rem;
+}
+.youtube-video {
+    text-align: center;
+    aspect-ratio: 16 / 9;
+    width: min(100% - 2rem, 50em);
+    margin-inline: auto;
+    
+}
+
+.youtube-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 90ch;
+    opacity: 0.7;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .about-container,
+    .youtube-container {
         grid-template-columns: 1fr;
         place-items: center;
         gap: 2rem;
