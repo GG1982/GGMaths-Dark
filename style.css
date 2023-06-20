@@ -1,12 +1,12 @@
 :root {
-    --step--2: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem);
-    --step--1: clamp(0.83rem, calc(0.78rem + 0.29vw), 1.00rem);
-    --step-0: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.15rem);
-    --step-1: clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem);
-    --step-2: clamp(1.44rem, calc(1.26rem + 0.89vw), 1.95rem);
-    --step-3: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem);
-    --step-4: clamp(2.07rem, calc(1.73rem + 1.70vw), 3.05rem);
-    --step-5: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+    --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+    --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+    --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+    --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+    --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
 
     --dark-clr: #0f0f0f;
     --light-clr: #fcfcfc;
@@ -47,6 +47,9 @@ a {
     text-transform: lowercase;
     color: #26e3c2;
     text-decoration: underline;
+}
+.body-link:hover {
+    opacity: 0.8;
 }
 
 .is-hidden {
@@ -244,6 +247,8 @@ header {
     padding: 0.5rem 1.8rem;
     border-radius: 40px;
     background-color: var(--dark-clr);
+    color: #26e3c2;
+    width: fit-content;
 }
 
 .btn:hover {
@@ -312,19 +317,46 @@ header {
 
 .tutoring-subjects-container {
     display: grid;
-    width: min(100% - 2em, 70em);
+    grid-template-areas: 
+    "a b"
+    "c d"
+    "e .";
+    width: min(100%, 70em);
     margin-inline: auto;
-    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
-    row-gap: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    row-gap: 2em;
     column-gap: 2em;
     margin-bottom: 2em;
 }
-
-
+@media (width < 800px) {
+    .tutoring-subjects-container {
+        display: grid;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
+}
 .tutoring-subjects-container > p {
     font-size: var(--step-0);
     opacity: 0.7;
-    max-width: 75ch;
+}
+.tutoring-subjects-container > p:nth-child(1) {
+    grid-area: a;
+}
+.tutoring-subjects-container > p:nth-child(2) {
+    grid-area: b;
+}
+.tutoring-subjects-container > p:nth-child(3) {
+    grid-area: c;
+}
+.tutoring-subjects-container > p:nth-child(4) {
+    grid-area: d;
+}
+.tutoring-subjects-container > p:nth-child(5) {
+    grid-area: e;
 }
 .card {
     background-color: #1A1A1A;
@@ -353,7 +385,7 @@ header {
     max-width: var(--body-content-width);
     margin-inline: auto;
     align-items: center;
-    gap: 1rem;
+    gap: 2em;
 }
 
 
@@ -380,12 +412,12 @@ header {
     max-width: var(--body-content-width);
     margin-inline: auto;
     align-items: center;
-    gap: 1rem;
+    gap: 2em;
 }
 .youtube-video {
     text-align: center;
     aspect-ratio: 16 / 9;
-    width: min(100% - 2rem, 50em);
+    width: min(100%, 50em);
     margin-inline: auto;
     
 }
@@ -410,14 +442,43 @@ header {
         max-width: 250px;
     }
 }
+
 /* Pricing */
 .pricing-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
-    gap: 4rem;
-    max-width: 700px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "online face"
+    "btn btn";
+    column-gap: 2em;
+    row-gap: 3em;
+    width: min(100%, 50em);
     margin-inline: auto;
 }
+
+.pricing-cards-container > div:nth-child(1) {
+    grid-area: online;
+}
+
+.pricing-cards-container > div:nth-child(1) {
+    grid-area: face;
+}
+
+.pricing-cards-container > div:nth-child(3) {
+    grid-area: btn;
+    justify-self: center;
+}
+
+@media (width < 600px) {
+    .pricing-cards-container {
+        grid-template-areas: 
+        "online"
+        "face"
+        "btn";
+        grid-template-columns: 1fr;
+    }
+}
+
 .pricing-card {
     background-color: #1A1A1A;
     padding: 20% 1rem 1rem;
@@ -432,9 +493,7 @@ header {
 .pricing-card p {
     opacity: var(--text-opacity);
 }
-.pricing-card > div:last-child {
-    margin-top: auto;
-}
+
 
 /* Reviews */
 .reviews-title {
