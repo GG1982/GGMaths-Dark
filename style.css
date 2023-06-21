@@ -284,17 +284,18 @@ header {
 .hero-body {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4em;
 }
 .hero-body-title {
     display: grid;
-    gap: 1rem;
+    gap: 1em;
 }
 
 .hero-body-btn {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    column-gap: 2em;
+    row-gap: 3em;
     justify-content: center;
 }
 
