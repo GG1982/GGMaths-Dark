@@ -9,6 +9,7 @@
     --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
 
     --dark-clr: #0f0f0f;
+    --dark-clr-2: #1A1A1A;
     --light-clr: #fcfcfc;
     --clr-accent: #45a0f5;
 
@@ -299,6 +300,7 @@ header {
     justify-content: center;
 }
 
+
 .hero-img > img {
     object-fit: cover;
 }
@@ -327,7 +329,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     row-gap: 2em;
     column-gap: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 10em;
 }
 @media (width < 800px) {
     .tutoring-subjects-container {
@@ -360,7 +362,7 @@ header {
     grid-area: e;
 }
 .card {
-    background-color: #1A1A1A;
+    background-color: var(--dark-clr-2);
     padding: 20% 1rem 1rem;
     border: 1px solid rgb(42, 42, 42);
 
@@ -481,7 +483,7 @@ header {
 }
 
 .pricing-card {
-    background-color: #1A1A1A;
+    background-color: var(--dark-clr-2);
     padding: 20% 1rem 1rem;
     border: 1px solid rgb(42, 42, 42);
 
@@ -520,7 +522,7 @@ header {
     page-break-inside: avoid;
     
     margin-top: 2rem;
-    background-color: #1A1A1A;
+    background-color: var(--dark-clr-2);
     padding: 20% 1rem 2rem;
     border: 1px solid rgb(42, 42, 42);
     border-radius: 20px;
