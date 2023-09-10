@@ -289,7 +289,13 @@ header {
 }
 .hero-body-title {
     display: grid;
-    gap: 1em;
+    place-items: center;
+    gap: 2em;
+}
+
+.hero-body-title > img {
+    height: 300px;
+    border-radius: 90px;
 }
 
 .hero-body-btn {
